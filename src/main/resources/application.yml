@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: monitorClient
+  jmx:
+    enabled: true
+  boot:
+    admin:
+      client:
+        url: http://127.0.0.1:9100
+        instance:
+          service-url: http://127.0.0.1:8080
+          prefer-ip: true
+          name: monitorClient
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
